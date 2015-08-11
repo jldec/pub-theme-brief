@@ -1,0 +1,9 @@
+{{{html}}}
+
+<div class="container">
+{{#eachFragment '#box'~}}
+<div class="box bg{{mod 4}} {{class}}" {{{box-style}}}>{{{html}}}</div>
+{{/eachFragment}}
+</div>
+
+<div class="copyright">{{{fragmentHtml '#copyright'}}}</div>
