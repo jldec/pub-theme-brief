@@ -11,9 +11,10 @@ module.exports = function(generator) {
   hb.registerHelper('box-style', function(frame) {
     var bg = this['background-image'];
     if (bg) {
-      return 'style=\'background-image:url("' + escape(bg) + '"); background-size:cover;\'';
+      return 'style=\'background-image:url("' +
+        hb.relPath(frame, this) + escape(bg) +
+        '"); background-size:cover;\'';
     }
   });
-
 
 }
