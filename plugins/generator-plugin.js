@@ -12,7 +12,7 @@ module.exports = function(generator) {
     var bg = this['background-image'];
     if (bg) {
       return 'style=\'background-image:url("' +
-        hb.relPath(frame, this) + escape(bg) +
+        hb.imageSrc(frame, this, bg) +
         '"); background-size:cover;\'';
     }
   });

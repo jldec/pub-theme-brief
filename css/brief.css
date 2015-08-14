@@ -77,4 +77,7 @@ html, body { font-size:10px; color:#000; }
 .presentation .container { display:block; }
 .presentation .box { min-height:100vh; }
 
-.copyright { font-size:smaller; text-color:#bbb; text-align:right; padding-right:1em; }
+.credit { font-size:smaller; color:#999; text-align:center; }
+.credit p { margin:0; padding:4px; }
+.credit a { white-space:nowrap; }
+.credit:hover { color:#000; background-color:#eee; }
