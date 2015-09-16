@@ -7,8 +7,6 @@ background-image: /images/boston.jpg
 class: white shadow bg-dark large center
 
 # Quick introduction
-link to this [](/)
-
 
 ---- #box-2 ----
 

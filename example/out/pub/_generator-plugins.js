@@ -3,6 +3,6 @@ module.exports=function(o){var e=(o.util,o.opts),t=e.log,n=o.handlebars;/\/\/loc
 },{}],2:[function(require,module,exports){
 require("/Users/hello/pub/theme-brief/plugins/generator-plugin.js")(generator),require("/Users/hello/pub/server/node_modules/pub-pkg-seo/generator-plugin.js")(generator);
 },{"/Users/hello/pub/server/node_modules/pub-pkg-seo/generator-plugin.js":1,"/Users/hello/pub/theme-brief/plugins/generator-plugin.js":3}],3:[function(require,module,exports){
-module.exports=function(e){var r=(e.opts,e.handlebars);e.util;r.registerHelper("mod",function(e,r){return r.data.index%e||0}),r.registerHelper("box-style",function(e){var t=this["background-image"];return t?"style='background-image:url(\""+r.relPath(e,this)+escape(t)+"\"); background-size:cover;'":void 0})};
+module.exports=function(e){var r=(e.opts,e.handlebars);e.util;r.registerHelper("mod",function(e,r){return r.data.index%e||0}),r.registerHelper("box-style",function(e){var t=this["background-image"];return t?"style='background-image:url(\""+r.imageSrc(e,this,t)+"\"); background-size:cover;'":void 0})};
 },{}]},{},[2])
 
