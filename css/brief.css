@@ -8,6 +8,22 @@ h1, h2, h3 { color:#4183c4; margin-bottom:0; }
 
 h2 + p, h3 + p, h2 + ul, h3 + ul { margin:0; }
 
+blockquote {
+  font-size:x-large;
+  font-style:italic;
+}
+
+blockquote > p {
+  display:inline;
+}
+
+blockquote:before {
+  content: "»";
+  color: #4183c4;
+  font-weight:bold;
+}
+
+
 .container { display:-webkit-flex; display:flex;
   -webkit-flex-flow: wrap row; flex-flow: wrap row; }
 .box { position:relative; -webkit-flex-grow:1; flex-grow:1; }
@@ -34,10 +50,14 @@ h2 + p, h3 + p, h2 + ul, h3 + ul { margin:0; }
 
 .bg-dark > div > * {
   background-color:rgba(0,0,0,0.1);
+  padding:1em;
+  margin:0 -1em;
 }
 
 .bg-darker > div > * {
   background-color:rgba(0,0,0,0.3);
+  padding:1em;
+  margin:0 -1em;
 }
 
 .center {
