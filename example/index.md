@@ -1,8 +1,5 @@
 ---- / ----
 name: Brief
-
-
----- #box-1 ----
 background-image: /images/boston.jpg
 class: white shadow bg-dark large center
 
@@ -73,7 +70,6 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 
 ---- #box-extra-3 ----
-background-image: /images/sunset.jpg
-class: white xx-large bg-darker center
 
 # Thank You
+![](/images/sunset.jpg)

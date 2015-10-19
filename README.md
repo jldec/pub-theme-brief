@@ -26,24 +26,18 @@ module.exports = {
 ```
 
 #### markdown fragments
-This theme looks for markdown fragments starting with `#box-`. E.g.
+This theme simply renders all markdown fragments in order using a flex layout.
 
-```markdown
----- / ----
-name: brief
-
----- #box-1 ----
-
-# Heading
-text
-
----- #box-2 ----
-
-# Heading
-text
+```css
+.container { display:-webkit-flex; display:flex; -webkit-flex-flow: wrap row; flex-flow: wrap row; }
+.box { position:relative; -webkit-flex-grow:1; flex-grow:1; }
+.box > div { width:450px; margin:auto; padding:20px; }
 ```
 
-For more details, including background images, and other styles, see `index.md` in the example folder.
+
+
+
+
 
 #### presentation controls
 These controls allow the theme to be used for simple HTML presentations. Simply hit enter, and adjust the browser zoom for comfortable viewing. Use the arrow keys to go backwards and forwards.

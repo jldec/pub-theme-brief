@@ -78,6 +78,7 @@ blockquote:before {
 .bg1 { background-color:#eee; }
 .bg2 { background-color:#ddd; }
 .bg3 { background-color:#d3d3d3; }
+.bg4 { background-color:#e3e3e3; }
 
 @media only screen and (max-width:450px) {
 h1 { margin:0; padding:0; }
