@@ -1,6 +1,7 @@
 body { font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
- -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; -moz-text-size-adjust:100%; text-size-adjust:100%;
- line-height:1.5; margin:0; }
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: greyscale;
+      -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; -moz-text-size-adjust:100%; text-size-adjust:100%;
+      line-height:1.5; margin:0; }
 
 a { color:#4183c4; text-decoration:none; font-weight:bold; }
 
@@ -9,7 +10,7 @@ h1, h2, h3 { color:#4183c4; margin-bottom:0; }
 h2 + p, h3 + p, h2 + ul, h3 + ul { margin-top:10px; }
 
 blockquote {
-  font-size:large;
+  font-size:x-large;
   font-style:italic;
 }
 
@@ -22,7 +23,6 @@ blockquote:before {
   color: #4183c4;
   font-weight:bold;
 }
-
 
 .container { display:-webkit-flex; display:flex;
   -webkit-flex-flow: wrap row; flex-flow: wrap row; }
