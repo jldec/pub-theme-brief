@@ -1,11 +1,17 @@
 {
   "name": "pub-theme-brief",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Single-page flexbox design with slideshow navigation for pub-server",
   "repository": "git://github.com/jldec/pub-theme-brief.git",
   "main": "pub-config.js",
-  "dependencies": {
-  },
+  "dependencies": {},
+  "files": [
+    "css/",
+    "js/",
+    "plugins/",
+    "templates/",
+    "pub-config.js"
+  ],
   "keywords": [
     "pub-server",
     "flexbox",

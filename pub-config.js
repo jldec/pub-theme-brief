@@ -7,7 +7,6 @@ var opts = module.exports = {
 
   staticPaths: [
     {path:'./css/brief.css', route:'/css', inject:true },
-    {path:'./js/hammer.min.js', route:'/js', inject:true },
     {path:'./js/brief.js', route:'/js', inject:true }
   ]
 

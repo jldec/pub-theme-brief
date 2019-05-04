@@ -1,5 +1,5 @@
 // pub-theme-brief navigation code
-// copyright 2015 jurgen leschner (github/jldec) - MIT license
+// copyright 2015-2019, jurgen leschner (github/jldec) - MIT license
 
 $(function(){
 
@@ -9,9 +9,6 @@ $(function(){
   calibrate();
 
   $(window).resize(calibrate);
-
-  // touch assignments
-  new Hammer($body.get(0)).on('swipeleft', prev).on('swiperight',next);
 
   // keyboard assignments
   $body.keydown(function(evt) {

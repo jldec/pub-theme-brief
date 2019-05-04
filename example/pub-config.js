@@ -1,6 +1,6 @@
 module.exports = {
 
-  appUrl: 'http://jldec.github.io/pub-theme-brief',
+  appUrl: 'https://jldec.github.io/pub-theme-brief',
 
   // replace '..' below with 'pub-theme-brief' if directory is copied
   pkgs: ['..', 'pub-pkg-seo', 'pub-pkg-font-open-sans'],
@@ -14,6 +14,6 @@ module.exports = {
     './CNAME'
   ],
 
-  outputs: { path:'./out', relPaths:1 },
+  outputs: { path:'../docs', relPaths:1 },
   noRobots: 1
 }

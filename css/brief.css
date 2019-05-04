@@ -4,6 +4,7 @@ body { font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
       line-height:1.5; margin:0; }
 
 a { color:#4183c4; text-decoration:none; font-weight:bold; }
+a:hover { text-decoration:underline; }
 
 h1, h2, h3 { color:#4183c4; margin-bottom:0; }
 
@@ -27,7 +28,7 @@ blockquote:before {
 .container { display:-webkit-flex; display:flex;
   -webkit-flex-flow: wrap row; flex-flow: wrap row; }
 .box { position:relative; -webkit-flex-grow:1; flex-grow:1; }
-.box > div { width:450px; margin:auto; padding:25px 20px; }
+.box > div { width:450px; min-height:350px; margin:auto; padding:25px 20px; }
 
 .box img { width:100%; }
 
@@ -58,7 +59,7 @@ blockquote:before {
   padding:1em;
 }
 
-.center {
+h1, .center {
   text-align:center;
 }
 

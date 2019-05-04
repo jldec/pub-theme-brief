@@ -1,12 +1,14 @@
 body { font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
- -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
- line-height:1.5; margin:0; }
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: greyscale;
+      -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; -moz-text-size-adjust:100%; text-size-adjust:100%;
+      line-height:1.5; margin:0; }
 
 a { color:#4183c4; text-decoration:none; font-weight:bold; }
+a:hover { text-decoration:underline; }
 
 h1, h2, h3 { color:#4183c4; margin-bottom:0; }
 
-h2 + p, h3 + p, h2 + ul, h3 + ul { margin:0; }
+h2 + p, h3 + p, h2 + ul, h3 + ul { margin-top:10px; }
 
 blockquote {
   font-size:x-large;
@@ -23,11 +25,10 @@ blockquote:before {
   font-weight:bold;
 }
 
-
 .container { display:-webkit-flex; display:flex;
   -webkit-flex-flow: wrap row; flex-flow: wrap row; }
 .box { position:relative; -webkit-flex-grow:1; flex-grow:1; }
-.box > div { width:450px; margin:auto; padding:20px; }
+.box > div { width:450px; min-height:350px; margin:auto; padding:25px 20px; }
 
 .box img { width:100%; }
 
@@ -58,7 +59,7 @@ blockquote:before {
   padding:1em;
 }
 
-.center {
+h1, .center {
   text-align:center;
 }
 
@@ -78,6 +79,7 @@ blockquote:before {
 .bg1 { background-color:#eee; }
 .bg2 { background-color:#ddd; }
 .bg3 { background-color:#d3d3d3; }
+.bg4 { background-color:#e3e3e3; }
 
 @media only screen and (max-width:450px) {
 h1 { margin:0; padding:0; }
