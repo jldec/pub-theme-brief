@@ -1,5 +1,5 @@
 // pub-theme-brief navigation code
-// copyright 2015-2019, jurgen leschner (github/jldec) - MIT license
+// copyright 2015-2020, Jürgen Leschner (github/jldec) - MIT license
 
 $(function(){
 
@@ -18,6 +18,9 @@ $(function(){
         return toggleMode(evt, true);
       case 27: // esc
         return toggleMode(evt, false);
+      case 33: // pgUp
+      case 34: // pgDown
+        return nextPage(34 - evt.which);
       case 37: // left
       case 38: // up
         return prev(evt);
@@ -26,6 +29,16 @@ $(function(){
         return next(evt);
     }
   });
+
+  function nextPage(backwards) {
+    if (!pageLinks || pageLinks.length < 2 || !pubRef) return;
+    var cnt = pageLinks.length;
+    var idx = pageLinks.indexOf(pubRef.href);
+    if (idx < 0) { idx = 0; }
+    idx = (idx + (backwards ? cnt - 1 : 1)) % cnt;
+    location.href = pageLinks[idx];
+    return false
+  }
 
   function calibrate() {
     offsets = [];

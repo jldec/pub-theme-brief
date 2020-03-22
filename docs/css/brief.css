@@ -11,7 +11,7 @@ h1, h2, h3 { color:#4183c4; margin-bottom:0; }
 h2 + p, h3 + p, h2 + ul, h3 + ul { margin-top:10px; }
 
 blockquote {
-  font-size:x-large;
+  font-size:1.5em;
   font-style:italic;
 }
 
@@ -64,15 +64,15 @@ h1, .center {
 }
 
 .large {
-  font-size:larger;
+  font-size:1.2em;
 }
 
 .x-large {
-  font-size:x-large;
+  font-size:1.5em;
 }
 
 .xx-large {
-  font-size:xx-large;
+  font-size:2em;
 }
 
 .bg0 { background-color:#fff; }
@@ -93,6 +93,9 @@ html, body { font-size:10px; color:#000; }
 .container { display:block; }
 .box { background-color:#fff; page-break-inside: avoid; }
 }
+
+body.presentation { font-size:2rem; }
+body.presentation .box > div { width:80%; }
 
 .presentation .container { display:block; }
 .presentation .box { min-height:100vh; }
