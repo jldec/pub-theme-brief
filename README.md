@@ -4,9 +4,13 @@ Single-page lightweight flexbox design with slideshow navigation for [pub-server
 
 Boxes are allowed flow to fill the entire window while keeping the text width inside each box constant.
 
-![](/images/screen1.png)
-![](/images/screen2.png)
-![](/images/screen3.png)
+![demo screen 1](./images/screen1.png)
+![demo screen 2](./images/screen2.png)
+![demo screen 3](./images/screen3.png)
+
+A navigation dropdown is provided for sites with multiple briefs.
+
+![Navigation button](./images/nav.png)
 
 #### installation
 To use this theme for a project on localhost, first `npm install` `pub-server` and `pub-theme-brief`. The following command will run pub with this theme.
