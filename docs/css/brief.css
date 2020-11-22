@@ -4,7 +4,7 @@ body { font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
       line-height:1.5; margin:0; }
 
 a { color:#4183c4; text-decoration:none; font-weight:bold; }
-a:hover { text-decoration:underline; }
+a:hover, a:focus { text-decoration:underline; }
 
 h1, h2, h3 { color:#4183c4; margin-bottom:0; }
 
@@ -90,11 +90,11 @@ h1 { margin:0; padding:0; }
 #nav p { margin:0; padding:0; }
 #nav > ul { position:fixed; left:0px; top:0px; z-index:100; padding:0; margin:0; list-style:none; }
 #nav > ul > li { color:#fff; opacity:0.2; cursor:pointer; height:34px; padding:4px; }
-#nav > ul > li:hover { color:#444; opacity:1; background-color:#ddd; filter: drop-shadow( 1px 1px 1px #777 ); }
+#nav > ul > li:hover, #nav > ul > li:focus { color:#444; opacity:1; background-color:#ddd; filter: drop-shadow( 1px 1px 1px #777 ); }
 #nav > ul > li > ul { position:absolute; top:-1000px; left:0px;  padding:0; margin:0; background-color:#ddd; text-align:left; z-index:200; list-style:none; }
-#nav > ul:hover > li > ul { top:36px; filter: drop-shadow( 1px 1px 1px #777 ); }
+#nav > ul:hover > li > ul, #nav > ul:focus > li > ul { top:36px; filter: drop-shadow( 1px 1px 1px #777 ); }
 #nav a { display:block;  line-height:1.6; padding:0 20px 0 8px; font-size:20px; text-decoration:none; background:none; white-space:nowrap; }
-#nav a:hover { color:#eee; background-color:#777; }
+#nav a:hover, #nav a:focus { color:#eee; background-color:#777; }
 
 @media print {
 html, body { font-size:10px; color:#000; }
@@ -114,4 +114,4 @@ body.presentation .box > div { width:80%; }
 .credit { font-size:smaller; color:#999; text-align:center; }
 .credit p { margin:0; padding:4px; }
 .credit a { white-space:nowrap; }
-.credit:hover { color:#000; background-color:#eee; }
+.credit:hover, .credit:focus { color:#000; background-color:#eee; }
