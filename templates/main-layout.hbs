@@ -16,6 +16,16 @@
 
 {{{renderPage}}}
 
+<nav id="nav">
+<ul><li>{{{navIcon}}}
+<ul>
+{{#eachPage~}}
+<li>{{{pageLink}}}</li>
+{{/eachPage~}}
+</ul>
+</li></ul>
+</nav>
+
 <script type="text/javascript" charset="utf-8">
 var pageLinks = [{{#eachPage~}}"{{pageHref}}",{{/eachPage~}}];
 </script>

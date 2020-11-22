@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>pub pub Editor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./pub/css/editor.css">
+</head>
+<body>
+<div data-render-page="/pub-editor-help">
+<div class="container">
+<div class="box bg3 " ><div data-render-html="/pub-editor-help" class="nopublish"><h2 id="editing-pages-with-pub-server">Editing pages with pub server</h2>
+<ul>
+<li><p><strong>try it out!</strong>  -- you can <a href="./pub/editor-help">edit this page</a>.</p>
+</li>
+<li><p>Click on the (E) button (ony visible for Editors) at the top right on the staging server, to open any page for editing in Composer.</p>
+</li>
+<li><p>Once open, the (E) changes to an (C) which closes the Composer and returns to normal staging website navigation.</p>
+</li>
+<li><p>In composer mode, there are two panes.<br>The markdown editor on the left<br>And the preview pane on the right</p>
+</li>
+<li><p>You can drag the little round dragger at top of the line separating the panes left and right. Your settings will be remembered across sessions.</p>
+</li>
+<li><p>The preview pane can be used to navigate the website, select other pages for editing, and display, in real-time, any changes you make in the editor on the left.</p>
+</li>
+<li><p>The website in the preview pane should look and behave just like the normal (staging) website. Click on links to navigate, and even use your browser&#39;s back button. The only exceptions are pages which require information from the server e.g. the thank-you pages after submitting a registration or an info request.</p>
+</li>
+<li><p>The composer can also be opened by prepending <code>pub/</code> to the beginning of the path in the url. E.g. to open this page in composer, go to <a href="./pub/editor-help">/pub/editor-help</a></p>
+</li>
+<li><p>sometimes if the network is slow, the composer won&#39;t work the first time -- navigating to another page by clicking somewhere in the preview should fix it.</p>
+</li>
+</ul>
+<h2 id="modifying-pages">Modifying pages</h2>
+<ul>
+<li><p>click on the editor button (E) at the top right, and wait a second or two for the markdown to appear in the left pane.</p>
+</li>
+<li><p>the header section at the top of the markdown in the left pane contains &quot;meta&quot; information like (most importantly) the <code>page:</code> which is the url path to the page, and the <code>template:</code> which defines the type of page.</p>
+</li>
+<li><p>below the header section is the &quot;main&quot; markdown content for the page.</p>
+</li>
+<li><p>edit away..., You should see your changes immediately reflected in the preview pane on the right.</p>
+</li>
+<li><p>All changes are saved automatically to the server (no need to click on any save button) but nothing is published to the www website. </p>
+</li>
+<li><p>Click on the close button (C) at the top right, to close the composer, and see the change on the staging site.</p>
+</li>
+</ul>
+<h2 id="committing-changes">Committing changes</h2>
+<ul>
+<li><p>At any time you can click on the ✓ (check symbol) at the top of the left pane.</p>
+</li>
+<li><p>you should see a list of all the updated pages or fragments which have not yet been committed.</p>
+</li>
+<li><p>Hovering over any one of the updates in the list should show you a bit of what changed (in case you forgot).</p>
+</li>
+<li><p>Clicking on one of the updates in the list will present a confirmation prompt. Click on OK to commit or Cancel to go back without comitting.</p>
+</li>
+<li><p>Once you commit, it will take a few minutes for the main www server to refresh its pages with those changes (right now the interval is set to 5 min).</p>
+</li>
+</ul>
+<h2 id="modifying-fragments">Modifying fragments</h2>
+<ul>
+<li><p>Content like the banner ads, and the bio&#39;s on the location pages and the staff page, lives in &quot;fragments&quot;. These have a <code>fragment:#fragment-name</code> header instead of a <code>page:path</code> header.</p>
+</li>
+<li><p>to edit this, navigate to the page, then click on the <strong>✍</strong> fragment selection pointer (little hand) at the top right and then click anywhere inside the fragment that you want to edit in the preview pane on the right. The markdown for the selected fragment should appear on the left.</p>
+</li>
+</ul>
+<h2 id="adding-or-removing-pages">Adding or removing pages</h2>
+<ul>
+<li>Contact your web admin for help adding new pages, or changing page urls.</li>
+</ul>
+<h2 id="uploading-images">Uploading images</h2>
+<ul>
+<li><p>For best results, images should be sized at 2x the desired pixel width and height and then given explicit width and height dimensions (1/2 of the actual) when inserted. See <a href="#composer-markdown-extensions">composer markdown extensions</a>  below for more details</p>
+</li>
+<li><p>To upload an image, click on the ☰ button at the top left. This will open a little uploader form which you can browse your file system for the image that you want to upload (drag and drop not supported yet sorry). After uploading you should see the image below the form together with a markdown snippet for the image, and the image URL.</p>
+</li>
+<li><p>The uploader will rename the image file with just lowercase and hyphens, but please use meaningful file names for your images before uploading them, so that someone looking at all the image files, can recognize what it is.</p>
+</li>
+<li><p>Usually you will copy the markdown snippet and paste it somewhere into the markdown editor. Note that inside markdown, you don&#39;t need the fully qualified image source url, just start the image url or link with <code>/images/...</code></p>
+</li>
+</ul>
+<h1 id="markdown">Markdown</h1>
+<p>Editor supports <a href="https://help.github.com/articles/github-flavored-markdown/">github flavored markdown</a>.</p>
+<h3 id="paragraphs-and-line-breaks">Paragraphs and line breaks</h3>
+<p>Simply leave a blank line between paragraphs. To force a line break put 2 spaces at the end.<br>like so.<br>done.</p>
+<h3 id="links-and-images">links and images</h3>
+<p>In general links have the form <code>[text](url &quot;title&quot;)</code></p>
+<p>Links within the website don&#39;t require any [text] if the page has a name e.g. <code>[](/contact-fmc)</code> will become <a href="./contact-fmc">. Contact Fmc</a>.</p>
+<p>Also, if the url starts with http:// or https:// and you want to show the url in the resulting page, you can just include it inline in the text without wrapping it in <code>[]()</code></p>
+<p>Markdown for images looks just like markdown for links with a <code>!</code> in front<br>E.g. <code>![jurgen&#39;s kids a few years ago](/images/gmail-logo-1.gif)</code><br><img src="./images/gmail-logo-1.gif" alt="jurgen&#39;s kids a few years ago"></p>
+<p>If you want an image which links to another page, you put the image markdown inside the text part of the link markdown like this.<br><code>[![Image](image-src)](link-url)</code></p>
+<h3 id="editor-markdown-extensions">Editor markdown extensions</h3>
+<p>Most of these extensions work by recognising patterns in the <code>[]( &quot;title&quot;)</code> part of the link markdown i.e the part in <code>&quot;&quot;</code> after the url.</p>
+<ul>
+<li><p>Use <code>^</code> to force a link to open in a new window E.g. <code>[](/help &quot;^&quot;)</code> <a href="./help" target="_blank" rel="noopener">. Help</a></p>
+</li>
+<li><p>Note: &quot;Fully qualified&quot; links (which include <code>https://servername/...</code>) automatically open in a new tab/window. E.g.<br><code>[google](https://www.google.com)</code> opens a new window on
+<a href="https://www.google.com">google</a></p>
+</li>
+<li><p>The link title part of the image markdown can be used for <code>WxH</code> sizing or <code>name=value</code> attributes. E.g.<br><code>&quot;align=right&quot;</code> <img src="./images/gmail-logo-1.gif" alt="" align="right"><br><code>&quot;width=32&quot;</code> <img src="./images/gmail-logo-1.gif" alt="" width="32"><br><code>&quot;12x12&quot; </code><img src="./images/gmail-logo-1.gif" alt="" width="12" height="12"></p>
+</li>
+</ul>
+<h3 id="markdown-inline-formatting">Markdown inline formatting</h3>
+<ul>
+<li><strong>BOLD</strong></li>
+<li><em>ITALIC</em></li>
+<li><strong><em>BOLD AND ITALIC</em></strong></li>
+<li><del>STRIKE-THRU</del></li>
+<li><code>quoted-text with &lt;&gt; tags</code></li>
+</ul>
+<pre><code>quoted
+paragraph
+spanning multiple lines</code></pre>
+<h1 id="h1-level-heading">h1 level heading</h1>
+<h2 id="h2-level-heading">h2 level heading</h2>
+<h3 id="h3-level-heading">h3 level heading</h3>
+<h4 id="h4-level-heading">h4 level heading</h4>
+<h3 id="lists">lists</h3>
+<ul>
+<li>bullet list</li>
+<li>bullet list<ul>
+<li>sub-bullet</li>
+<li>sub-bullet<ul>
+<li>sub-sub-bullet</li>
+<li>sub-sub-bullet</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>numbered list<ol>
+<li>sub-point</li>
+<li>sub-point</li>
+<li>sub-sub-point</li>
+</ol>
+</li>
+<li>numbered list</li>
+<li>numbered list</li>
+</ol>
+<hr>
+<p>Use <code>* * *</code> on a separate line for horizontal rules </p>
+<hr>
+<h3 id="tables">tables</h3>
+<p>GFM tables use <code>|</code> to separate columns</p>
+<pre><code>| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |</code></pre>
+<p>becomes...</p>
+<table>
+<thead>
+<tr>
+<th align="left">Left-Aligned</th>
+<th align="center">Center Aligned</th>
+<th align="right">Right Aligned</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">col 3 is</td>
+<td align="center">some wordy text</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td align="left">col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td align="left">zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody></table>
+<h2 id="">...</h2>
+<p>Here&#39;s a <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown cheatsheet</a> with more information about things like tables.</p>
+<p>And here&#39;s some <a href="./help/markdown-motivation">more background</a> on the motivations behind markdown</p>
+<p><img src="./images/2016-05-07-13.43.19.jpg" alt="" width="100"></p>
+</div></div>
+</div>
+
+<div class="credit"><p><span class="fa">&#xf004;</span> powered by <a href="https://jldec.github.io/pub-doc/">pub-server</a> and <a href="https://github.com/jldec/pub-theme-brief">pub-theme-brief</a></p>
+<div data-render-html="">&nbsp;</div></div>
+
+<nav id="nav">
+<ul><li>
+<ul>
+<li><a href="./">Quick Intro</a></li>
+<li><a href="./thoughts">Thoughts about GitHub Pages</a></li>
+</ul>
+</li></ul>
+</nav>
+
+</div><!--page-->
+<script src="./js/jquery-1.12.4.min.js"></script>
+</body>
+</html>

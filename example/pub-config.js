@@ -3,9 +3,14 @@ module.exports = {
   appUrl: 'https://jldec.github.io/pub-theme-brief',
 
   // replace '..' below with 'pub-theme-brief' if directory is copied
-  pkgs: ['..', 'pub-pkg-seo', 'pub-pkg-font-open-sans'],
+  pkgs: [
+    '..',
+    'pub-pkg-seo',
+    'pub-pkg-font-open-sans',
+    'pub-pkg-font-awesome'
+  ],
 
-  sources: { path:'./index.md', writable:1 },
+  sources: { path:'./markdown', writable:1 },
 
   staticPaths: [
     { path:'./images', route:'/images' },

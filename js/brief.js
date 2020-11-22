@@ -45,19 +45,19 @@ $(function(){
     $boxes.each(function() {
       offsets.push($(this).offset().top);
     });
-    console.log(offsets);
+    // console.log(offsets);
   }
 
   function next(evt) {
     var old = getTop();
     if (evt.metaKey) {
-      console.log('scrolling to last box')
+      // console.log('scrolling to last box')
       setTop(offsets[offsets.length - 1]);
       return false;
     }
     for (var i=0; i<offsets.length; i++) {
       if (offsets[i] > old + 5) {
-        console.log('scrolling down from '+old+' to '+offsets[i])
+        // console.log('scrolling down from '+old+' to '+offsets[i])
         setTop(offsets[i]);
         return false;
       }
@@ -67,13 +67,13 @@ $(function(){
   function prev(evt) {
     var old = getTop();
     if (evt.metaKey) {
-      console.log('scrolling to first box')
+      // console.log('scrolling to first box')
       setTop(offsets[0]);
       return false;
     }
     for (var i=offsets.length-1; i>=0; i--) {
       if (offsets[i] < old - 5) {
-        console.log('scrolling up from '+old+' to '+offsets[i]);
+        // console.log('scrolling up from '+old+' to '+offsets[i]);
         setTop(offsets[i]);
         return false;
       }

@@ -1,9 +1,9 @@
 ---- / ----
-name: Brief
+name: Quick Intro
 background-image: /images/boston.jpg
 class: white shadow bg-dark large center
 
-# Quick introduction
+# Quick Intro
 
 ---- #box-2 ----
 
