@@ -8,7 +8,7 @@
   "author": "Jürgen Leschner",
   "license": "MIT",
   "dependencies": {
-    "pub-theme-brief": "^2.0.0"
+    "pub-theme-brief": "^2.0.1"
   },
   "scripts": {
     "develop": "pub",

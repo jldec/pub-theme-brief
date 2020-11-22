@@ -20,6 +20,5 @@ module.exports = {
   ],
 
   outputs: { path:'../docs', relPaths:1 },
-  noRobots: 1,
-  noEditor: 1
+  noRobots: 1
 }
