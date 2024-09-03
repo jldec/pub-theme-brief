@@ -8,8 +8,9 @@
   "author": "Jürgen Leschner",
   "license": "MIT",
   "dependencies": {
-    "pub-theme-brief": "^2.0.3",
-    "open-sans-fontface": "^1.4.0"
+    "open-sans-fontface": "^1.4.0",
+    "pub-server": "^2.12.0",
+    "pub-theme-brief": "^2.0.3"
   },
   "scripts": {
     "develop": "pub",
